@@ -1,5 +1,5 @@
 {
-    "name": "iexbase/tron-api",
+    "name": "steven-ok/tron-api",
     "description": "A PHP API for interacting with Tron (Trx)",
     "license": "MIT",
     "type":   "library",
@@ -22,7 +22,7 @@
         "php": "^7.4",
         "comely-io/data-types": "^1.0",
         "guzzlehttp/guzzle": "^7.0",
-        "iexbase/web3.php": "^2.0.1",
+        "steven-ok/web3.php": "dev-master",
         "kornrunner/secp256k1": "^0.1.2",
         "simplito/elliptic-php": "^1.0",
         "ext-json": "*",
