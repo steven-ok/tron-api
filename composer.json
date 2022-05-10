@@ -21,7 +21,7 @@
     "require": {
         "php": "^7.4",
         "comely-io/data-types": "^1.0",
-        "guzzlehttp/guzzle": "^7.0",
+        "guzzlehttp/guzzle": ">= 6.0.0",
         "steven-ok/web3.php": "dev-master",
         "kornrunner/secp256k1": "^0.1.2",
         "simplito/elliptic-php": "^1.0",
