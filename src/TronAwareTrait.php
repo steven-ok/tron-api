@@ -28,7 +28,8 @@ trait TronAwareTrait
      */
     public function toHex($str)
     {
-        if(mb_strlen($str) == 34 && mb_substr($str, 0, 1) === 'T') {
+        $prefix = mb_substr($str, 0, 1);
+        if(mb_strlen($str) == 34 && ($prefix === 'T' || $prefix === 'V')) {
             return $this->address2HexString($str);
         };
 
@@ -43,7 +44,7 @@ trait TronAwareTrait
      */
     public function address2HexString($sHexAddress)
     {
-        if(strlen($sHexAddress) == 42 && mb_strpos($sHexAddress, '41') == 0) {
+        if(strlen($sHexAddress) == 42 && (mb_strpos($sHexAddress, '41') == 0 || mb_strpos($sHexAddress, '46') == 0)) {
             return $sHexAddress;
         }
         return Base58Check::decode($sHexAddress,0,3);

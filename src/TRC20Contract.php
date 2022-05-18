@@ -366,7 +366,7 @@ class TRC20Contract
      */
     private function trigger($function, $address = null, array $params = [])
     {
-        $owner_address = is_null($address) ? '410000000000000000000000000000000000000000' : $this->_tron->address2HexString($address);
+        $owner_address = is_null($address) ? substr($this->contractAddress, 0, 2) . '0000000000000000000000000000000000000000' : $this->_tron->address2HexString($address);
 
         return $this->_tron->getTransactionBuilder()
             ->triggerConstantContract($this->abiData, $this->_tron->address2HexString($this->contractAddress), $function, $params, $owner_address);
